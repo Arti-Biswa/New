@@ -1,0 +1,310 @@
+<section class="home">
+    <div class="container">
+      <div class="text">
+        <h1>Plan Your Pilgrimage With Us</h1>
+        <p>Let's travel together to the way to the Dharma with respect for the environment.</p>
+        <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
+          <a href="https://www.youtube.com/embed/TzegCZmszDE?si=UZyALBg37SQzHH4y"  class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>EXPLORE</span></a>
+        </div>
+      </div>
+      
+      <div class="homecard grid">
+        <!-- Image and text side by side -->
+        <div class="imageTextDiv">
+          <img src="assets/img/ta.jpg" alt="Image" class="image">
+          <div class="text">
+            <h2>Talk To Our Travel Advisor</h2>
+            <p>Our Travel Agency will take you to your desired pilgrimage sites.</p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+  
+
+<section id="about" class="about">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Our Tour</h2>
+        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6 order-1 order-lg-2">
+          <img src="assets/img/lum.jpg" class="img-fluid" alt="">
+        </div>
+        <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+          <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
+          <p class="fst-italic">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua.
+          </p>
+          <ul>
+            <li><i class="fas fa-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+            <li><i class="fas fa-check-circle"></i>  Duis aute irure dolor in reprehenderit in voluptate velit.</li>
+            <li><i class="fas fa-check-circle"></i>  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+          </ul>
+          <p>
+            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <section id="store" class="pic section-bg">
+    <div class="row gy-4">
+      <h3>Popular Sights</h3>
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch" *ngFor="let chef of chefs; let i = index" data-aos="fade-up">
+        <div class="pic-member">
+          <div class="member-img">
+            <div class="social">
+              <a href=""><i class="far fa-heart heart-icon"></i></a>
+            </div>
+            <img [src]="chef.image" class="img-fluid" alt="">
+          </div>
+          <div class="member-info">
+            <p [innerHTML]="chef.description"></p>
+          </div>
+          <div class="d" data-aos="fade-up" data-aos-delay="200">
+            <a [href]="chef.button1Link" class="free">{{ chef.button1Text }}</a>
+            <a [href]="chef.button2Link" class="quote">{{ chef.button2Text }}</a> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+.home {
+  height: 150vh;
+  width: 100%;
+  background: linear-gradient(rgba(126, 126, 126, 0.522), rgba(124, 123, 123, 0.522)), url("/assets/img/b.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+}
+.d-flex {
+  justify-content: center;
+}
+
+.text h1 {
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+}
+
+.text p {
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 1rem 0;
+  max-width: 70%;
+  text-align: center;
+  margin: auto;
+}
+
+.btn-watch-video{
+  display: inline-block;
+  text-decoration: none;
+  font-size: 16px; 
+  font-weight: 600; 
+  color: #290d0d; 
+  background-color: transparent; 
+  padding: 10px 25px; 
+  border-radius: 30px; 
+  transition: all 0.3s ease; 
+  border:2px solid  #007bff;
+  margin-top: 10px;
+}
+
+.btn-watch-video:hover {
+  background-color: #007bff;
+  transition: background-color 0.4s ease-in-out; 
+}
+
+.homecard {
+  position: absolute;
+  bottom: -60px;
+  left: 50%; 
+  transform: translateX(-50%); 
+  width: 80%;
+  display: flex; 
+  align-items: center;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.imageTextDiv {
+  display: flex;
+  align-items: flex-start;
+}
+
+.imageTextDiv img {
+  width: 100%; 
+  height: 150px; 
+}
+
+.imageTextDiv .text {
+  flex-grow: 1; 
+}
+
+.imageTextDiv .text p {
+  color: black; 
+  white-space: nowrap; 
+  overflow: visible; 
+  
+}
+
+@media screen and (max-width: 768px) {
+  .homecard{
+    margin-bottom: -50px;
+  }
+  .imageTextDiv {
+    flex-direction: column; 
+    align-items: flex-start; 
+  }
+
+  .imageTextDiv img {
+   margin-bottom: 5px;
+    width: 100%;
+  }
+  .imageTextDiv .text p {
+    color: black; 
+    white-space: normal;
+    font-size: 15px;   
+  }
+}
+.about{
+  margin-top: 150px;
+}
+
+.about h2{
+  text-align: center;
+}
+.about .content h3 {
+  font-weight: 700;
+  font-size: 28px;
+}
+
+.about .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about .content ul li {
+  padding-bottom: 10px;
+}
+
+.about .content ul i {
+  font-size: 20px;
+  padding-right: 4px;
+  color: #5cb874;
+}
+.about .content p:last-child {
+  margin-bottom: 0;
+}
+
+#store {
+  padding: 60px 0;
+}
+.pic-member {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.pic-member:hover {
+  transform: translateY(-10px);
+}
+.member-img img {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px 10px 0 0;
+}
+.pic-member {
+  position: relative;
+}
+.social {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.heart-icon {
+  font-size: 24px;
+  color: red; 
+  margin: 20px 20px;
+}
+
+.member-info {
+  padding:20px;
+}
+
+.member-info p {
+  font-size: 16px;
+  color: #333;
+}
+.d {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  padding: 10px 20px;
+  background-color: #f8f9fa;
+}
+
+.d a {
+  text-decoration: none;
+  color: #333;
+  width: 150px;
+  padding: 8px 20px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin: 0 5px; 
+}
+
+.d a:hover {
+  background-color: #333;
+  color: #fff;
+}
+h3{
+  text-align: center;
+  
+}
+  chefs = [
+    { image: 'assets/img/1.webp',description: 'Lumbini <br>BTN.20,000/-<br>3 Days | 2 Nights', button1Text: 'Book Now',
+     button1Link:'/create-customer', button2Text: 'Learn More ',button2Link:'/about' },
+    { image: 'assets/img/ko.jpg', description: 'Kopan Monastry <br>BTN.26,000/-<br>4 Days | 3 Nights', button1Text: 'Book Now',
+    button1Link:'/create-customer', button2Text: 'Learn More' ,button2Link:'/about'},
+    { image: 'assets/img/buda.jpg', description: 'Swayambhunath Stupa (Monkey Temple) <br>BTN.30,000/-<br>4 Days | 3 Nights', 
+     button1Text: 'Book Now',button1Link:'/create-customer', button2Text: 'Learn More',button2Link:'/about' },
+    { image: 'assets/img/bodh.jpg',description:'BodhGaya <br>BTN.25,000/-<br>5 Days | 4 Nights',button1Text: 'Book Now',
+    button1Link:'/create-customer',button2Text: 'Learn More',button2Link:'/about' },
+    { image: 'assets/img/tw.jpg', description: 'Tawang Monastry <br>BTN.30,000/-<br>20 Days | 19 Nights', button1Text: 'Book Now', 
+    button1Link:'/create-customer',button2Text: 'Learn More',button2Link:'/about' },
+    { image: 'assets/img/sanchi.jpg', description: 'Sanchi Stupa <br>BTN.25,000/-<br>7 Days | 6 Nights', button1Text: 'Book Now', 
+    button1Link:'/create-customer', button2Text: 'Learn More' ,button2Link:'/about'},
+
+  ];
+
